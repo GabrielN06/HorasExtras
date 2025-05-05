@@ -1,4 +1,6 @@
-﻿    Console.Write("Salário por hora: ");
+﻿    Console.WriteLine("Calculadora de Salário");
+
+    Console.Write("\nSalário por hora: ");
      double salarioHora = double.Parse(Console.ReadLine()!);
 
     Console.Write("Horas trabalhadas: ");
