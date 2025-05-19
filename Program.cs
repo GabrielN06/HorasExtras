@@ -1,14 +1,26 @@
-﻿    Console.WriteLine("Calculadora de Salário");
+﻿double CalcularSalario(double salarioHoraBase, double horasTrabalhadas, double horasExtras)
+{
+    double salarioNormal = salarioHoraBase * horasTrabalhadas;
+    double salarioExtra = horasExtras * (salarioHoraBase * 1.40);
+    return salarioNormal + salarioExtra;
+} 
+    Console.WriteLine("--- Calculadora de Salário ---");
 
-    Console.Write("\nSalário por hora: ");
-     double salarioHora = double.Parse(Console.ReadLine()!);
+    Console.Write("Salário-hora base (R$): ");
+    double salarioHora = double.Parse(Console.ReadLine()!);
 
-    Console.Write("Horas trabalhadas: ");
-     double horas = double.Parse(Console.ReadLine()!);
+    Console.Write("Total de horas trabalhadas: ");
+    double horasTrabalhadas = double.Parse(Console.ReadLine()!);
 
-    Console.Write("Horas extras: ");
-     double horasExtras = double.Parse(Console.ReadLine()!);
+    Console.Write("Número de horas extras: ");
+    double horasExtras = double.Parse(Console.ReadLine()!);
 
-     double salario = (salarioHora * horas) + (salarioHora * 1.4 * horasExtras);
-    Console.WriteLine($"Salário final: R$ {salario:F2}");
+    double salarioFinal = CalcularSalario(salarioHora, horasTrabalhadas, horasExtras);
+
+    Console.WriteLine($"\nSalário total: R$ {salarioFinal:F2}"); 
     
+
+
+
+
+
